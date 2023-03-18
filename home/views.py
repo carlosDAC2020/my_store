@@ -6,5 +6,3 @@ def index(request):
     return render(request, "index.html",{
         "products":Product.objects.all()
     })
-
-

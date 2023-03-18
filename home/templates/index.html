@@ -1,109 +1,354 @@
+{% load static %}
 
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="es">
 
-{% block page_content %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Baby Prince</title>
+</head>
+
+<body>
+    <main class="main" id="main">
+        <section class="home" style="background-image: url('{% static 'images/home-page.png' %}');">
+            <header class="header">
+                <div class="header__logo-container">
+                    <a class="header__logo-link" href="#"><img class="header__logo" src="{% static 'images/logo.png' %}" alt="logo"></a>
+                </div>
+                <nav class="navbar">
+                    <ul class="navbar__list">
+                        <li><a class="navbar__link" href="#">Inicio</a></li>
+                        <li><a class="navbar__link" href="#">Tienda</a></li>
+                        <li><a class="navbar__link" href="#">Quienes somos</a></li>
+                        <li><a class="navbar__link" href="#">Contáctanos</a></li>
+                    </ul>
+                </nav>
+                <div class="header__icons-container">
+                    <img class="header__icon" src="{% static 'images/search.svg' %}">
+                    <img class="header__icon" src="{% static 'images/cart.svg' %}">
+                    <img class="header__icon" src="{% static 'images/user.svg' %}">
+                </div>
         
-        <!-- Header-->
-        <header class="bg-dark py-5">
-            <div class="container px-4 px-lg-5 my-5">
-                <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Shop in style</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p>
+                <!--INICIO MODAL-NAVBAR-->
+        
+                <div class="modalNavbar__background">
+                    <nav class="modalNavbar">
+                        <img class="modalNavbar__close-icon" src="{% static 'images/icon-close.svg' %}" alt="" />
+                        <ul class="modalNavbar__list">
+                            <li><a class="modalNavbar__link" href="#">Inicio</a></li>
+                            <li><a class="modalNavbar__link" href="#">Tienda</a></li>
+                            <li><a class="modalNavbar__link" href="#">Quienes somos</a></li>
+                            <li><a class="modalNavbar__link" href="#">Contáctanos</a></li>
+                        </ul>
+                    </nav>
                 </div>
-            </div>
-        </header>
-
-
-        <!-- Content section 1-->
-        <section id="scroll">
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6 order-lg-2">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="https://burst.shopifycdn.com/photos/blank-notebook-on-creative-workspace.jpg?width=925&format=pjpg&exif=1&iptc=1" alt="..." /></div>
-                    </div>
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="p-5">
-                            <h2 class="display-4">About</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
-                        </div>
-                    </div>
+                <!--FIN MODAL-NAVBAR -->
+            </header>
+            <div class="home__container">
+                <div class="home__line"></div>
+                <div class="home__title-container">
+                    <h1 class="home__title">Baby <span>Prince</span></h1>
+                    <a class="home__see-more" href="#">Ver más</a>
                 </div>
-            </div>
+            </div> 
         </section>
-        <!-- Content section 2-->
-        <section>
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="https://burst.shopifycdn.com/photos/artist-designer-at-work.jpg?width=925&format=pjpg&exif=1&iptc=1" alt="..." /></div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="p-5">
-                            <h2 class="display-4">Mision</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
-                        </div>
-                    </div>
+        <section class="products">
+            <article class="products__container">
+                <div class="products__text-container">
+                    <h3 class="products__title">Cobijas</h3>
+                    <a class="products__see-all-container" href="#">
+                        <p class="products__see-all">VER TODO</p>
+                        <img class="products__arrow-right" src="/images/arrow-right.svg">
+                    </a>
                 </div>
-            </div>
-        </section>
-        <!-- Content section 3-->
-        <section>
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6 order-lg-2">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="https://burst.shopifycdn.com/photos/business-flatlay-in-india.jpg?width=925&format=pjpg&exif=1&iptc=1" alt="..." /></div>
-                    </div>
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="p-5">
-                            <h2 class="display-4">Vision</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Section-->
-        <section class="py-5">
-            <div class="container px-4 px-lg-5 mt-5">
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-
+                <div class="products__product-container">
                     {% for product in products %}
-                    
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="{{product.product_photo.url}}" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">{{product.name}}</h5>
-                                    <!-- Product price-->
-                                    $40.00 - $80.00
+                        <div class="products__product">
+                            <div class="products__img1-container"  style="background-image: url('{{ product.product_photo.url }}');">
+                                <div class="products__labels-container">
+                                    <span class="products__label1">más vendido</span>
+                                    <span class="products__label2">Nuevo</span>
                                 </div>
+                                <img class="products__cart" src="/images/cart.svg">
                             </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                            <div class="products__product-description-container">
+                                <p class="products__product-description">Cobija</p>
+                                <p class="products__product-price">$1,432</p>
                             </div>
                         </div>
-                    </div>
-                    
                     {% endfor %}
-            
+                
+                </div>
+            </article>
+            <article class="products__container">
+                <div class="products__text-container">
+                    <h3 class="products__title">Pijamas</h3>
+                    <a class="products__see-all-container" href="#">
+                        <p class="products__see-all">VER TODO</p>
+                        <img class="products__arrow-right" src="/images/arrow-right.svg">
+                    </a>
+                </div>
+                <div class="products__product-container">
+                    <div class="products__product">
+                        <div class="products__img5-container">
+                            <div class="products__labels-container">
+                                <span class="products__label1">más vendido</span>
+                                <span class="products__label2">Nuevo</span>
+                            </div>
+                            <img class="products__cart" src="/images/cart.svg">
+                        </div>
+                        <div class="products__product-description-container">
+                            <p class="products__product-description">Pijama</p>
+                            <p class="products__product-price"><span
+                                    class="products__product-discount">$2,350</span>$1,432</p>
+                        </div>
+                    </div>
+                    <div class="products__product">
+                        <div class="products__img6-container">
+                            <div class="products__labels-container">
+                                <span class="products__label1">más vendido</span>
+                                <span class="products__label2">Nuevo</span>
+                            </div>
+                            <img class="products__cart" src="/images/cart.svg">
+                        </div>
+                        <div class="products__product-description-container">
+                            <p class="products__product-description">Pijama</p>
+                            <p class="products__product-price"><span
+                                    class="products__product-discount">$2,350</span>$1,432</p>
+                        </div>
+                    </div>
+                    <div class="products__product">
+                        <div class="products__img7-container">
+                            <div class="products__labels-container">
+                                <span class="products__label1">más vendido</span>
+                                <span class="products__label2">Nuevo</span>
+                            </div>
+                            <img class="products__cart" src="/images/cart.svg">
+                        </div>
+                        <div class="products__product-description-container">
+                            <p class="products__product-description">Pijama</p>
+                            <p class="products__product-price"><span
+                                    class="products__product-discount">$2,350</span>$1,432</p>
+                        </div>
+                    </div>
+                    <div class="products__product">
+                        <div class="products__img8-container">
+                            <div class="products__labels-container">
+                                <span class="products__label1">más vendido</span>
+                                <span class="products__label2">Nuevo</span>
+                            </div>
+                            <img class="products__cart" src="/images/cart.svg">
+                        </div>
+                        <div class="products__product-description-container">
+                            <p class="products__product-description">Pijama</p>
+                            <p class="products__product-price"><span
+                                    class="products__product-discount">$2,350</span>$1,432</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="products__product-container">
+                    <div class="products__product">
+                        <div class="products__img9-container">
+                            <div class="products__labels-container">
+                                <span class="products__label1">más vendido</span>
+                                <span class="products__label2">Nuevo</span>
+                            </div>
+                            <img class="products__cart" src="/images/cart.svg">
+                        </div>
+                        <div class="products__product-description-container">
+                            <p class="products__product-description">Pijama</p>
+                            <p class="products__product-price"><span
+                                    class="products__product-discount">$2,350</span>$1,432</p>
+                        </div>
+                    </div>
+                    <div class="products__product">
+                        <div class="products__img10-container">
+                            <div class="products__labels-container">
+                                <span class="products__label1">más vendido</span>
+                                <span class="products__label2">Nuevo</span>
+                            </div>
+                            <img class="products__cart" src="/images/cart.svg">
+                        </div>
+                        <div class="products__product-description-container">
+                            <p class="products__product-description">Pijama</p>
+                            <p class="products__product-price"><span
+                                    class="products__product-discount">$2,350</span>$1,432</p>
+                        </div>
+                    </div>
+                    <div class="products__product">
+                        <div class="products__img11-container">
+                            <div class="products__labels-container">
+                                <span class="products__label1">más vendido</span>
+                                <span class="products__label2">Nuevo</span>
+                            </div>
+                            <img class="products__cart" src="/images/cart.svg">
+                        </div>
+                        <div class="products__product-description-container">
+                            <p class="products__product-description">Pijama</p>
+                            <p class="products__product-price"><span
+                                    class="products__product-discount">$2,350</span>$1,432</p>
+                        </div>
+                    </div>
+                    <div class="products__product">
+                        <div class="products__img12-container">
+                            <div class="products__labels-container">
+                                <span class="products__label1">más vendido</span>
+                                <span class="products__label2">Nuevo</span>
+                            </div>
+                            <img class="products__cart" src="/images/cart.svg">
+                        </div>
+                        <div class="products__product-description-container">
+                            <p class="products__product-description">Pijama</p>
+                            <p class="products__product-price"><span
+                                    class="products__product-discount">$2,350</span>$1,432</p>
+                        </div>
+                    </div>
+                </div>
+                    
+                </div>
+            </article>
+        </section>
+        <section class="categories">
+            <h2 class="categories__title">Compra por categoría</h2>
+            <div class="categories__container">
+                <div class="categories__items-container">
+                    <ul class="categories__list">
+                        <li><a class="categories__link" href="#"><span>Pijamas</span></a></li>
+                        <li><a class="categories__link" href="#">Sábanas</a></li>
+                        <li><a class="categories__link" href="#">Cobijas</a></li>
+                    </ul>
+                </div>
+                <div class="categories__products-container">
+                    <div class="categories__product">
+                        <div class="categories__img13-container">
+                            <div class="categories__labels-container">
+                                <span class="categories__label1">más vendido</span>
+                                <span class="categories__label2">Nuevo</span>
+                            </div>
+                            <img class="categories__cart" src="/images/cart.svg">
+                        </div>
+                        <div class="categories__product-description-container">
+                            <p class="categories__product-description">Pijama</p>
+                            <p class="categories__product-price">
+                                <span class="products__product-discount">$2,350</span>$1,432
+                            </p>
+                        </div> 
+                    </div>
+                    <div class="categories__product">
+                        <div class="categories__img14-container">
+                            <div class="categories__labels-container">
+                                <span class="categories__label1">más vendido</span>
+                                <span class="categories__label2">Nuevo</span>
+                            </div>
+                            <img class="categories__cart" src="/images/cart.svg">
+                        </div>
+                        <div class="categories__product-description-container">
+                            <p class="categories__product-description">Pijama</p>
+                            <p class="categories__product-price">
+                                <span class="products__product-discount">$2,350</span>$1,432
+                            </p>
+                        </div> 
+                    </div>   
+                    <div class="categories__product">
+                        <div class="categories__img15-container">
+                            <div class="categories__labels-container">
+                                <span class="categories__label1">más vendido</span>
+                                <span class="categories__label2">Nuevo</span>
+                            </div>
+                            <img class="categories__cart" src="/images/cart.svg">
+                        </div>
+                        <div class="categories__product-description-container">
+                            <p class="categories__product-description">Pijama</p>
+                            <p class="categories__product-price">
+                                <span class="products__product-discount">$2,350</span>$1,432
+                            </p>
+                        </div> 
+                    </div>   
+
+                </div>
+                <div class="categories__arrow-right-container">
+                    <img class="categories__arrow-right" src="/images/arrow-right.svg">
+                </div> 
+            </div>
+        </section>
+        <section class="whyUs">
+            <div class="whyUs__background" style="background-image: url('{% static 'images/foto-bebe1.png' %}');"></div>
+            <article class="whyUs__info-container">
+                <h2 class="whyUs__title">¿Por qué elegirnos?</h2>
+                <div class="whyUs__services-container">
+                    <div class="whyUs__service">
+                        <div class="whyUs__icon-container">
+                            <img class="whyUs__icon" src="{% static 'images/star.svg' %}">
+                        </div>
+                        <h4 class="whyUs__subtitle">Alta Calidad</h4>
+                        <p class="whyUs__info">
+                            Todos nuestros productos fueron creados bajo los mejores estándares de calidad.
+                        </p>
+                    </div>
+                    <div class="whyUs__service">
+                        <div class="whyUs__icon-container">
+                            <img class="whyUs__icon" src="{% static 'images/bag.svg' %}">
+                        </div>
+                        <h4 class="whyUs__subtitle">Devoluciones fáciles</h4>
+                        <p class="whyUs__info">
+                            Nuestra política de devoluciones es sencilla, es por eso que nuestros clientes se sienten a
+                            gusto en nuestra tienda.
+                        </p>
+                    </div>
+                
+                    <div class="whyUs__service">
+                        <div class="whyUs__icon-container">
+                            <img class="whyUs__icon" src="{% static 'images/user-bag.svg' %}">
+                        </div>
+                        <h4 class="whyUs__subtitle">Servicio al cliente</h4>
+                        <p class="whyUs__info">
+                            Nuestro servicio al cliente es eficiente, pues tu comodidad y satisfacción es lo más
+                            importante.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__info-container">
+            <a class="footer__logo-link" href="#"><img class="footer__logo" src="{% static 'images/logo.png' %}" alt="logo"></a>
+            <nav class="footer__navbar">
+                <ul class="footer__list">
+                    <li><a class="footer__link" href="">Inicio</a></li>
+                    <li><a class="footer__link" href="">Tienda</a></li>
+                    <li><a class="footer__link" href="">Quienes somos</a></li>
+                    <li><a class="footer__link" href="">Contáctanos</a></li>
+                </ul>
+            </nav>
+            <div class="footer__suscribe-container">
+                <h5 class="footer__subtitle">Suscríbete para más información</h5>
+                <form class="footer__form">
+                    <input class="footer__form-email" type="email" name="email" placeholder="Ingresa tu email">
+                    <input class="footer__form-submit" type="submit" value="Suscribirse">
+                </form>
+                <div class="footer__icons-container">
+                    <div class="footer__icon-circle">
+                        <img class="footer__icon" src="{% static 'images/facebook.svg' %}">
+                    </div>
+                    <div class="footer__icon-circle">
+                        <img class="footer__icon" src="{% static 'images/instagram.svg' %}">
+                    </div>
+                    <div class="footer__icon-circle">
+                        <img class="footer__icon" src="{% static 'images/linkedin.svg' %}">
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        
-        
-{% endblock %}
-        
+        </div>
+        <div class="footer__rights-container">
+            <p class="footer__right">© 2023 All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

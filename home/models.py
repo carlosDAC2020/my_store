@@ -3,6 +3,7 @@ from django.db import models
 class Product(models.Model):# tabla productos 
     
     name = models.CharField(max_length=20)
+    description = models.TextField()
     category = models.CharField(max_length=20)
     units_available = models.IntegerField(default=0)
     worth_unit = models.IntegerField(default=0)
