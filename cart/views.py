@@ -51,7 +51,7 @@ def add_sales(request,product_id):
         new_sale = Sale.objects.create(id_invoice=new_invoice, id_product=product)
         new_sale.save()
     
-    return redirect("sales:home")
+    return redirect("users:home")
 
 
 def delete_sales(request, id_sale):
@@ -61,6 +61,6 @@ def delete_sales(request, id_sale):
         if len(Sale.objects.filter(id_invoice=sale.id_invoice))==0:
             inv=Invoice.objects.get(pk=sale.id_invoice.pk)
             inv.delete()
-    return redirect("sales:shopping_cart")
+    return redirect("cart:cart")
 
 
